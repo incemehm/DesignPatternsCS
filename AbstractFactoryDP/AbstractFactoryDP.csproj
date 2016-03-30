@@ -7,8 +7,8 @@
     <ProjectGuid>{1EA489D6-3C5B-4121-A3C8-B5BEABCB51E5}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AbstractFactoryPattern</RootNamespace>
-    <AssemblyName>AbstractFactoryPattern</AssemblyName>
+    <RootNamespace>AbstractFactoryDP</RootNamespace>
+    <AssemblyName>AbstractFactoryDP</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
