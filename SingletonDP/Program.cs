@@ -15,6 +15,8 @@ namespace SingletonDP
             string name = line.GetName();
             int number = line.GetNumber();
 
+            Console.WriteLine("Name: " + name + ", number: " + number);
+
         }
     }
 }

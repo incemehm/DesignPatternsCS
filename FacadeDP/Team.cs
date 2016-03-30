@@ -16,9 +16,9 @@ namespace FacadeDP
             Players.Add(player);
         }
 
-        public void StartWithBall()
+        public void StartWithPlayer(Player player)
         {
-            Console.WriteLine("Game Started!");
+            Console.WriteLine(player.Name + " kicked off. Game Started!");
         }
     }
 }
