@@ -10,6 +10,13 @@ namespace ObserverDP
     {
         static void Main(string[] args)
         {
+            Bildirim bildirim = new Bildirim();
+
+            bildirim.TakipciEkle(new TwitterTakipci());
+            bildirim.TakipciEkle(new TwitterTakipci());
+            bildirim.TakipciEkle(new BlogTakipci());
+
+            bildirim.TweetAt("İlk tweet!");
         }
     }
 }
