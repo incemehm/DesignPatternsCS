@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AbstractFactoryPattern
+namespace AbstractFactoryDP
 {
     public class HighPerformanceHardwareFactory : IHardwareFactory
     {
