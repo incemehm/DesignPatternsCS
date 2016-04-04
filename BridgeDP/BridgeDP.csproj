@@ -41,8 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataEngine.cs" />
+    <Compile Include="IDBConnection.cs" />
+    <Compile Include="LocalDataEngine.cs" />
+    <Compile Include="MsSqlDBConnection.cs" />
+    <Compile Include="OracleDBConnection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServerDataEngine.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
