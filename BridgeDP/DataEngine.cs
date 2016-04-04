@@ -14,11 +14,6 @@ namespace BridgeDP
             dbConnection = dbConn;
         }
         
-        public IDBConnection DBConnection
-        {
-            set { dbConnection = value; }
-        }
-
         public abstract void Execute(string sql);
         public abstract void Open(string connStr);
     }
