@@ -10,6 +10,11 @@ namespace ChainOfResponsibilityDP
     {
         static void Main(string[] args)
         {
+            Makina makina = new Makina();
+            Islem islem = new SuAlmaIslemi().SonrakiIslem(new YikamaIslemi().SonrakiIslem(new DurulamaIslemi()));
+
+            islem.Basla(makina);
+
         }
     }
 }
