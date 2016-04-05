@@ -41,8 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IKisiIterator.cs" />
+    <Compile Include="IRehber.cs" />
+    <Compile Include="Kisi.cs" />
+    <Compile Include="KisiIterator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rehber.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
