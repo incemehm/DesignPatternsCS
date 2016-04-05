@@ -10,6 +10,11 @@ namespace TemplateMethodDP
     {
         static void Main(string[] args)
         {
+            Canli canli = new Insan();
+            canli.HayatDongusu();
+
+            canli = new Kedi();
+            canli.HayatDongusu();
         }
     }
 }
