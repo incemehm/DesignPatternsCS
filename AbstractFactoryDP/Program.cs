@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AbstractFactoryDP
 {
@@ -12,27 +8,23 @@ namespace AbstractFactoryDP
         {
             IHardwareFactory hardwareFactory = null;
 
-            hardwareFactory = new HighPerformanceHardwareFactory();
+            hardwareFactory = new HardwareFactoryHighPrice();
 
             IProcessor processor = hardwareFactory.ProcessorModel();
-            IRam ram = hardwareFactory.RAMModel();
-            IHdd hdd = hardwareFactory.HDDModel();
+            IRAM ram = hardwareFactory.RAMModel();
 
             processor.IntegrateProcessor();
             ram.IntegrateRAM();
-            hdd.IntegrateHDD();
 
             Console.WriteLine("-----------------------");
 
-            hardwareFactory = new FairPriceHardwareFactory();
+            hardwareFactory = new HardwareFactoryLowPrice();
 
             processor = hardwareFactory.ProcessorModel();
             ram = hardwareFactory.RAMModel();
-            hdd = hardwareFactory.HDDModel();
 
             processor.IntegrateProcessor();
             ram.IntegrateRAM();
-            hdd.IntegrateHDD();
         }
     }
 }

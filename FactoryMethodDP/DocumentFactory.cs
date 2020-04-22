@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FactoryMethodDP
 {
     public class DocumentFactory
     {
-        public IDocument CreateVersion(string docType) // Factory Method budur. Nesne yaratma sorumluluğunu alır.
+        public IDocument CreateVersion(string docType) //Factory method
         {
             if (docType.Equals("PDF"))
             {
@@ -20,7 +16,7 @@ namespace FactoryMethodDP
             }
             else
             {
-                throw new Exception("Hatalı Seçim");
+                throw new Exception("Wrong Choice!");
             }
         }
     }

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AbstractFactoryDP
+﻿namespace AbstractFactoryDP
 {
-    public interface IRam
+    public interface IRAM
     {
         void IntegrateRAM();   
     }

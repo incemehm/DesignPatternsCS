@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BuilderDP
 {
@@ -10,27 +6,32 @@ namespace BuilderDP
     {
         static void Main(string[] args)
         {
+            ConstructionMaster constructionMaster;
+            ProjectOwner owner = new ProjectOwner();
 
-            Garson garson = new Garson();
-
-            // Adana Kebap istiyoruz, kurulum nesnesini yarat.
-            Usta usta = new AdanaUsta();
-
-            // Yönetici sınıfa kurulum nesnesini ver. Adana Kebap ustasını (kurucusunu) seçtik
-            garson.SetUstaAndCreateKebap(usta);
+            // Hire a beginner construction master
+            constructionMaster = new BeginnerConstMaster();
             
-            // Kebap yapıldı ve hazır
-            Kebap kebap = garson.GetKebap();
+            // Build house with a beginner construction master
+            owner.BuildHouse(constructionMaster);
+            
+            Console.WriteLine(constructionMaster.House);
 
-            Console.WriteLine(kebap);
+            // Hire a mid-level construction master
+            constructionMaster = new MidLevelConstMaster();
 
-            // Şimdi de Manisa Kebabı istedik.
-            usta = new ManisaUsta();
+            // Build house with a mid-level construction master
+            owner.BuildHouse(constructionMaster);
 
-            garson.SetUstaAndCreateKebap(usta);
-            kebap = garson.GetKebap();
+            Console.WriteLine(constructionMaster.House);
 
-            Console.WriteLine(kebap);
+            // Hire a experienced construction master
+            constructionMaster = new ExperiencedConstMaster();
+
+            // Build house with a experienced construction master
+            owner.BuildHouse(constructionMaster);
+
+            Console.WriteLine(constructionMaster.House);
 
         }
     }

@@ -41,20 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HighPerformanceHardwareFactory.cs" />
-    <Compile Include="FairPriceHardwareFactory.cs" />
-    <Compile Include="IntelProcessor.cs" />
-    <Compile Include="IHdd.cs" />
+    <Compile Include="HardwareFactoryHighPrice.cs" />
+    <Compile Include="HardwareFactoryLowPrice.cs" />
+    <Compile Include="ProcessorIntel.cs" />
     <Compile Include="IProcessor.cs" />
     <Compile Include="IHardwareFactory.cs" />
-    <Compile Include="IRam.cs" />
-    <Compile Include="IbmRam.cs" />
+    <Compile Include="IRAM.cs" />
+    <Compile Include="RAMIBM.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AMDProcessor.cs" />
-    <Compile Include="KingstonRam.cs" />
-    <Compile Include="SamsungHDD.cs" />
-    <Compile Include="ToshibaHDD.cs" />
+    <Compile Include="ProcessorAMD.cs" />
+    <Compile Include="RAMKingston.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

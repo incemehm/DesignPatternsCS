@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FactoryMethodDP
 {
@@ -16,7 +12,7 @@ namespace FactoryMethodDP
             Console.WriteLine(doc.GetDocumentTitle());
             Console.WriteLine(doc.GetDocumentContent());
 
-             doc = factory.CreateVersion("DOCX");
+            doc = factory.CreateVersion("DOCX");
             Console.WriteLine(doc.GetDocumentTitle());
             Console.WriteLine(doc.GetDocumentContent());
 

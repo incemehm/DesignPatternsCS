@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PrototypeDP
 {
@@ -10,12 +6,13 @@ namespace PrototypeDP
     {
         static void Main(string[] args)
         {
-            Dvd dvd = new Dvd("Düğün DVDsi", "Sample string content");
+            Dvd dvd = new Dvd("The Hobbit", "There and back again");
+
+            Console.WriteLine(dvd);
 
             Dvd copyDvd = (Dvd)dvd.Clone();
 
             Console.WriteLine(copyDvd);
-
         }
     }
 }

@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SingletonDP
 {
@@ -16,6 +11,12 @@ namespace SingletonDP
             int number = line.GetNumber();
 
             Console.WriteLine("Name: " + name + ", number: " + number);
+
+            VodafoneLazy lineLazy = VodafoneLazy.GetInstance();
+            string name2 = lineLazy.GetName();
+            int number2 = lineLazy.GetNumber();
+
+            Console.WriteLine("Name: " + name2 + ", number: " + number2);
 
         }
     }

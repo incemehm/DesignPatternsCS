@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PrototypeDP
+﻿namespace PrototypeDP
 {
-    public class Dvd : IDisc
+    public class Dvd : Disc
     {
         public string Name { get; set; }
         public object Content { get; set; }
@@ -16,14 +10,16 @@ namespace PrototypeDP
             Name = name;
             Content = content;
         }
-
-        public IDisc Clone()
+        
+        public override Disc Clone()
         {
-            return (IDisc)this.MemberwiseClone();
+            return (Disc)this.MemberwiseClone();
         }
+
         public override string ToString()
         {
             return "DVD [Name=" + Name + ", Content=" + Content + "]";
         }
+
     }
 }
