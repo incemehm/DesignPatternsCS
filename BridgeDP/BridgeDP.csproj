@@ -44,7 +44,7 @@
     <Compile Include="DataEngine.cs" />
     <Compile Include="IDBConnection.cs" />
     <Compile Include="LocalDataEngine.cs" />
-    <Compile Include="MsSqlDBConnection.cs" />
+    <Compile Include="MySQLDBConnection.cs" />
     <Compile Include="OracleDBConnection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

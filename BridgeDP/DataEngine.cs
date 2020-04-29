@@ -1,20 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BridgeDP
+﻿namespace BridgeDP
 {
-    public abstract class DataEngine
+    public class DataEngine
     {
         protected IDBConnection dbConnection;
+
         public DataEngine(IDBConnection dbConn)
         {
             dbConnection = dbConn;
         }
         
-        public abstract void Execute(string sql);
-        public abstract void Open(string connStr);
+        public virtual void Execute(string query)
+        {
+            dbConnection.ExecuteQuery(query);
+        }
+        public virtual void Open(string connStr)
+        {
+            dbConnection.OpenConnection(connStr);
+        }
     }
 }

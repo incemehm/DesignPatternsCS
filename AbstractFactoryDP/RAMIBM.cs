@@ -1,12 +1,10 @@
-﻿using System;
-
-namespace AbstractFactoryDP
+﻿namespace AbstractFactoryDP
 {
     public class RAMIBM : IRAM
     {
         public void IntegrateRAM()
         {
-            Console.WriteLine("IBM RAM is being intregrated...");
+            System.Console.WriteLine("IBM RAM is being intregrated...");
         }
     }
 }

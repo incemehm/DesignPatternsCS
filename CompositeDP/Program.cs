@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CompositeDP
+﻿namespace CompositeDP
 {
     class Program
     {
@@ -33,7 +27,7 @@ namespace CompositeDP
             folderManager.AddFile(file3);
             folderManager.AddFile(folder2);
 
-            // Ağaç yapısı üzerinde dolaşarak, tüm dosyaların bilgileri yazılır.
+            // Iterates over tree and gets names.
             folderManager.GetName();
         }
     }

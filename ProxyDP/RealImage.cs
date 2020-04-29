@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ProxyDP
+﻿namespace ProxyDP
 {
     public class RealImage : IImage
     {
-        public void LoadImage()
+        public RealImage()
         {
             // Load Image From Disc.
-            Console.WriteLine("Image is being loaded from disc...");
+            System.Console.WriteLine("Image is being loaded from disc...");
+        }
+
+        public void Display()
+        {
+            System.Console.WriteLine("Loaded image is being displayed...");
         }
     }
 }

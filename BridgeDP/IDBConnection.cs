@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BridgeDP
+﻿namespace BridgeDP
 {
     public interface IDBConnection
     {
-        void ExecuteSQL(string sql);
+        void ExecuteQuery(string query);
+
         void OpenConnection(string connStr);
     }
 }

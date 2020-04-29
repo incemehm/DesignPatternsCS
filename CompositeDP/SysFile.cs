@@ -1,23 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CompositeDP
+﻿namespace CompositeDP
 {
     public class SysFile : IFile
     {
-        private string Filename { get; set; }
+        private string filename { get; set; }
 
-        public SysFile(string fileName)
+        public SysFile(string filename)
         {
-            Filename = fileName;
+            this.filename = filename;
         }
 
         public void GetName()
         {
-            Console.WriteLine("Dosya İsmi: " + Filename);
+            System.Console.WriteLine("Filename: " + filename);
         } 
     }
 }

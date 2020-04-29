@@ -41,8 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Not.cs" />
-    <Compile Include="NotHavuzu.cs" />
+    <Compile Include="Grade.cs" />
+    <Compile Include="GradePool.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

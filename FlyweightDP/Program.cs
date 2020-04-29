@@ -1,22 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FlyweightDP
+﻿namespace FlyweightDP
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string[] harfler = new string[] { "AA", "BA", "BB", "AA", "CC", "FF", "FF", "BB", "CC" };
-            NotHavuzu havuz = new NotHavuzu();
+            string[] letters = new string[] { "AA", "BA", "BB", "AA", "CC", "FF", "FF", "BB", "CC", "BB", "AA", "CC", "FF", "BB", "CC", "BA" };
+            GradePool gradePool = new GradePool();
 
-            foreach (string harf in harfler)
+            foreach (string letter in letters)
             {
-                Not not = havuz.GetNot(harf);
-                not.PrintNot();
+                Grade grade = gradePool.GetGrade(letter);
+                grade.Print();
             }
         }
     }

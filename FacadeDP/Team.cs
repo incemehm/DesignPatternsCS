@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FacadeDP
 {
@@ -18,7 +15,12 @@ namespace FacadeDP
 
         public void StartWithPlayer(Player player)
         {
-            Console.WriteLine(player.Name + " kicked off. Game Started!");
+            System.Console.WriteLine(player.Name + " kicked off. Game Started!");
+        }
+
+        public Player GetPlayer(string name)
+        {
+            return Players.First(x => x.Name == name);
         }
     }
 }

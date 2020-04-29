@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AbstractFactoryDP
+﻿namespace AbstractFactoryDP
 {
     class Program
     {
@@ -16,7 +14,7 @@ namespace AbstractFactoryDP
             processor.IntegrateProcessor();
             ram.IntegrateRAM();
 
-            Console.WriteLine("-----------------------");
+            System.Console.WriteLine("-----------------------");
 
             hardwareFactory = new HardwareFactoryLowPrice();
 

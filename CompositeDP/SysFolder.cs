@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace CompositeDP
 {
     public class SysFolder : IFile
     {
-        private List<IFile>  fileList  = new List<IFile>();
+        private List<IFile>  files  = new List<IFile>();
 
         public void GetName()
         {
-            foreach (IFile file in fileList)
+            foreach (IFile file in files)
             {
                 file.GetName();
             }
@@ -20,11 +16,11 @@ namespace CompositeDP
 
         public void AddFile(IFile file)
         {
-            fileList.Add(file);
+            files.Add(file);
         }
         public void RemoveFile(IFile file)
         {
-            fileList.Remove(file);
+            files.Remove(file);
         }
 
     }

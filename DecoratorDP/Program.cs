@@ -1,27 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DecoratorDP
+﻿namespace DecoratorDP
 {
     class Program
     {
         static void Main(string[] args)
         {
-            IMakarna makarna = new SadeMakarna();
-            makarna.ServisEt();
+            IMeal meal = new Meal();
+            meal.Serve();
 
-            makarna = new SosluMakarna(new SadeMakarna());
-            makarna.ServisEt();
+            meal = new SaucyMeal(new Meal());
+            meal.Serve();
 
-            makarna = new PeynirliMakarna(new SadeMakarna());
-            makarna.ServisEt();
+            meal = new SaltyMeal(new Meal());
+            meal.Serve();
 
-            makarna = new PeynirliMakarna(new SosluMakarna(new SadeMakarna()));
-            makarna.ServisEt();
-
+            meal = new SaltyMeal(new SaucyMeal(new Meal()));
+            meal.Serve();
         }
     }
 }

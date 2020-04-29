@@ -1,21 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AdapterDP
+﻿namespace AdapterDP
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Priz priz = new Priz();
-            priz.Connect();
+            Socket socket = new Socket();
+            socket.Connect();
 
-            priz = new PrizAdapter();
-            priz.Connect();
+            EnglishSocket englishSocket = new EnglishSocket();
 
+            socket = new SocketAdapter(englishSocket);
+            socket.Connect();
         }
     }
 }

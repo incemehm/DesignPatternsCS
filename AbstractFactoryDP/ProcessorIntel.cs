@@ -1,12 +1,10 @@
-﻿using System;
-
-namespace AbstractFactoryDP
+﻿namespace AbstractFactoryDP
 {
     public class ProcessorIntel : IProcessor
     {
         public void IntegrateProcessor()
         {
-            Console.WriteLine("Intel processor is being intregrated...");
+            System.Console.WriteLine("Intel processor is being intregrated...");
         }
     }
 }

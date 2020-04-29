@@ -1,21 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BridgeDP
+﻿namespace BridgeDP
 {
     public class OracleDBConnection : IDBConnection
     {
-        public void ExecuteSQL(string sql)
+        public void ExecuteQuery(string query)
         {
-            Console.WriteLine(sql + " komutu Oracle-Sqlde çalıştırıldı...");
+            System.Console.WriteLine(query + ", command executed in Oracle DB...");
         }
 
         public void OpenConnection(string connStr)
         {
-            Console.WriteLine(connStr + " ile Oracle-Sqle bağlandı...");
+            System.Console.WriteLine(connStr + ", connected to Oracle DB...");
         }
     }
 }

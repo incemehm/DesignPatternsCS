@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BridgeDP
+﻿namespace BridgeDP
 {
     class Program
     {
         static void Main(string[] args)
         {
-            DataEngine engine = new LocalDataEngine(new MsSqlDBConnection());
+            DataEngine engine = new LocalDataEngine(new MySQLDBConnection());
             engine.Open("connStr");
             engine.Execute("select * from records");
 
@@ -18,7 +12,7 @@ namespace BridgeDP
             engine.Open("connStr");
             engine.Execute("select * from records");
 
-            engine = new ServerDataEngine(new MsSqlDBConnection());
+            engine = new ServerDataEngine(new MySQLDBConnection());
             engine.Open("connStr");
             engine.Execute("select * from records");
 

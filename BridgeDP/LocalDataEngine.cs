@@ -1,28 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BridgeDP
+﻿namespace BridgeDP
 {
     public class LocalDataEngine : DataEngine
     {
-        public LocalDataEngine(IDBConnection dbConn)
-            : base(dbConn)
+        public LocalDataEngine(IDBConnection dbConn) : base(dbConn)
         {
         }
 
-        public override void Execute(string sql)
+        public override void Execute(string query)
         {
-            Console.WriteLine("Localhostta komut çalıştırılıyor...");
-            dbConnection.ExecuteSQL(sql);
+            System.Console.WriteLine("---- Local Data Engine ----");
+            base.Execute(query);
         }
 
         public override void Open(string connStr)
         {
-            Console.WriteLine("Localhosta bağlanılıyor...");
-            dbConnection.OpenConnection(connStr);
+            System.Console.WriteLine("---- Local Data Engine ----");
+            base.Open(connStr);
         }
     }
 }
