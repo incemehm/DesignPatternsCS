@@ -18,6 +18,7 @@
             padRightOperation = mainOperation.SetNextOperation(new PadRightOperation());
             removeSpaceOperation = padRightOperation.SetNextOperation(new RemoveSpaceOperation());
             padLeftOperation = removeSpaceOperation.SetNextOperation(new PadLeftOperation());
+            padLeftOperation.SetNextOperation(new UppercaseOperation());
 
             mainOperation.Start("Hello Mars!");
 
