@@ -1,24 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MementoDP
+﻿namespace MementoDP
 {
     class Program
     {
         static void Main(string[] args)
         {
-            WindowsStatus status = new WindowsStatus() { IsActive = true, Theme = "White" };
-            ComputerMemory memory = new ComputerMemory();
-            memory.WindowsState = status.Save();
+            Monitor monitor = new Monitor();
 
-            status.IsActive = false;
-            status.Theme = "Black";
+            ScreenSaver screenSaver = new ScreenSaver() { Theme = "Colorful Spring", TimeInterval = 60 };
 
-            status.Restore(memory.WindowsState);
-            Console.WriteLine(status.Theme);
+            monitor.LastActiveState = screenSaver.Save();
+
+            System.Console.WriteLine("Current theme: " + screenSaver.Theme);
+            System.Console.WriteLine("Last theme: " + monitor.LastActiveState.Theme);
+            System.Console.WriteLine("-----------------------");
+
+            screenSaver.Theme = "Black Clouds";
+
+            System.Console.WriteLine("Current theme: " + screenSaver.Theme);
+            System.Console.WriteLine("Last theme: " + monitor.LastActiveState.Theme);
+            System.Console.WriteLine("-----------------------");
+
+            System.Console.WriteLine("Restoring last theme!");
+            screenSaver.Restore(monitor.LastActiveState);
+
+            System.Console.WriteLine("Current theme: " + screenSaver.Theme);
+            System.Console.WriteLine("Last theme: " + monitor.LastActiveState.Theme);
+            System.Console.WriteLine("-----------------------");
 
         }
     }

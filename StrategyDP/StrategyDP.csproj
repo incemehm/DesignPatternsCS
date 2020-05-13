@@ -42,9 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Yatirim.cs" />
-    <Compile Include="BTipiFon.cs" />
-    <Compile Include="ATipiFon.cs" />
-    <Compile Include="IFon.cs" />
+    <Compile Include="QuickSort.cs" />
+    <Compile Include="BubbleSort.cs" />
+    <Compile Include="ISortingAlgorithm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

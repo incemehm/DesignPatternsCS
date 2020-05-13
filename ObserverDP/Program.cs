@@ -1,22 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ObserverDP
+﻿namespace ObserverDP
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Bildirim bildirim = new Bildirim();
+            Notification notification = new Notification();
 
-            bildirim.TakipciEkle(new TwitterTakipci());
-            bildirim.TakipciEkle(new TwitterTakipci());
-            bildirim.TakipciEkle(new BlogTakipci());
+            notification.AddFollower(new TwitterFollower());
+            notification.AddFollower(new TwitterFollower());
+            notification.AddFollower(new BlogFollower());
 
-            bildirim.TweetAt("İlk tweet!");
+            notification.TweetSomething("First tweet!");
         }
     }
 }

@@ -1,27 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace IteratorDP
+﻿namespace IteratorDP
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Rehber rehber = new Rehber();
-            rehber.Ekle(new Kisi() { Ad = "mehmet", Numara = 3 });
-            rehber.Ekle(new Kisi() { Ad = "ahmet", Numara = 5 });
-            rehber.Ekle(new Kisi() { Ad = "murat", Numara = 7 });
-            rehber.Ekle(new Kisi() { Ad = "aykut", Numara = 9 });
+            PhoneBook<Person> phoneBook = new PhoneBook<Person>();
+            phoneBook.Add(new Person() { Name = "fatih", Number = 333 });
+            phoneBook.Add(new Person() { Name = "ahmet", Number = 555 });
+            phoneBook.Add(new Person() { Name = "murat", Number = 777 });
+            phoneBook.Add(new Person() { Name = "aykut", Number = 999 });
 
 
-            IKisiIterator iterator = rehber.GetIterator();
-            while (iterator.HasItem)
+            Iterator<Person> iterator = phoneBook.GetIterator();
+
+            while (iterator.MoveNext())
             {
-                Console.WriteLine("{0}:{1}", iterator.Current.Ad, iterator.Current.Numara);
-                iterator.Next();
+                System.Console.WriteLine("Name: {0}, Number:{1}", iterator.Current.Name, iterator.Current.Number);                
             }
         }
     }

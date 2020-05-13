@@ -41,12 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HavayoluSirketi.cs" />
-    <Compile Include="Kule.cs" />
+    <Compile Include="Airline.cs" />
+    <Compile Include="IAirport.cs" />
+    <Compile Include="Airport.cs" />
     <Compile Include="Lufthansa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="THY.cs" />
+    <Compile Include="Pegasus.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

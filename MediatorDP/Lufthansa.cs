@@ -1,27 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MediatorDP
+﻿namespace MediatorDP
 {
-    public class Lufthansa : HavayoluSirketi
+    public class Lufthansa : Airline
     {
-         public Lufthansa( Kule kule ): base(kule)
-         {
-             kule.LufthansaLisansVer(this);
-         }
-
-        public override void InisIzniVer()
-         {
-             kule.LufthansaInisIzniVer();
-            Console.WriteLine("Lufthansa iniş izni verildi.");
+        public Lufthansa(IAirport airport, string flightCode) : base(airport, flightCode)
+        {
+            airport.RegisterAirline(this);
         }
 
-        public override void Beklet()
+        public override void RequestLanding()
         {
-            Console.WriteLine("Lufthansa bekletiliyor.");
+            System.Console.WriteLine($"Lufthansa ({this.FlightCode}) requests landing permission!");
+
+            airport.ManageLanding(this.FlightCode);            
+        }
+
+        public override void Allow()
+        {
+            System.Console.WriteLine($"Lufthansa ({this.FlightCode}) allowed!");
+        }
+
+        public override void Hold()
+        {
+            System.Console.WriteLine($"Lufthansa ({this.FlightCode}) on hold!");
         }
     }
 }

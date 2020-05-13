@@ -1,22 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace StrategyDP
+﻿namespace StrategyDP
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Yatirim yatirim = new Yatirim(new ATipiFon());
-            double tutar = yatirim.GetiriHesapla(100);
-            Console.WriteLine("A Tipi Fon getirisi: " + tutar);
+            int[] numbers = new int[] { 1, 9, 5, 7, 3 };
 
-            yatirim = new Yatirim(new BTipiFon());
-            tutar = yatirim.GetiriHesapla(100);
-            Console.WriteLine("B Tipi Fon getirisi: " + tutar);
+            ArrayManager arrayManager = new ArrayManager(new BubbleSort());
+            arrayManager.Sort(numbers);
+
+            arrayManager = new ArrayManager(new QuickSort());
+            arrayManager.Sort(numbers);
         }
     }
 }

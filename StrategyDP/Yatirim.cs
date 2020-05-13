@@ -1,23 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace StrategyDP
+﻿namespace StrategyDP
 {
-    public class Yatirim
+    public class ArrayManager
     {
-        private IFon  birim;
+        private ISortingAlgorithm  algorithm;
 
-        public Yatirim(IFon birim)
+        public ArrayManager(ISortingAlgorithm algorithm)
         {
-            this.birim = birim;
+            this.algorithm = algorithm;
         }
 
-        public double GetiriHesapla(double tutar)
+        public void Sort(int[] numbers)
         {
-           return birim.Hesapla(tutar);
+            algorithm.Sort(numbers);
         }
     }
 }

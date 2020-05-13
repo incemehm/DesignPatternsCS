@@ -1,19 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ChainOfResponsibilityDP
+﻿namespace ChainOfResponsibilityDP
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Makina makina = new Makina();
-            Islem islem = new SuAlmaIslemi().SonrakiIslem(new YikamaIslemi().SonrakiIslem(new DurulamaIslemi()));
+            Operation mainOperation = new LowercaseOperation();
+            Operation removeSpaceOperation = mainOperation.SetNextOperation(new RemoveSpaceOperation());
+            Operation padLeftOperation = removeSpaceOperation.SetNextOperation(new PadLeftOperation());
+            Operation insertDashOperation = padLeftOperation.SetNextOperation(new InsertDashOperation());
+            Operation padRightOperation = insertDashOperation.SetNextOperation(new PadRightOperation());
 
-            islem.Basla(makina);
+            mainOperation.Start("Hello World!");
+
+            System.Console.WriteLine("-----------------------");
+
+            mainOperation = new InsertDashOperation();
+            padRightOperation = mainOperation.SetNextOperation(new PadRightOperation());
+            removeSpaceOperation = padRightOperation.SetNextOperation(new RemoveSpaceOperation());
+            padLeftOperation = removeSpaceOperation.SetNextOperation(new PadLeftOperation());
+
+            mainOperation.Start("Hello Mars!");
 
         }
     }

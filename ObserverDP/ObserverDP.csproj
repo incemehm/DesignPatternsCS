@@ -41,13 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bildirim.cs" />
-    <Compile Include="BlogTakipci.cs" />
-    <Compile Include="IBildirim.cs" />
-    <Compile Include="ITakipci.cs" />
+    <Compile Include="Notification.cs" />
+    <Compile Include="BlogFollower.cs" />
+    <Compile Include="INotification.cs" />
+    <Compile Include="IFollower.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TwitterTakipci.cs" />
+    <Compile Include="TwitterFollower.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

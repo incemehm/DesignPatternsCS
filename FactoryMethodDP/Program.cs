@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace FactoryMethodDP
+﻿namespace FactoryMethodDP
 {
     class Program
     {
@@ -9,12 +7,12 @@ namespace FactoryMethodDP
             DocumentFactory factory = new DocumentFactory();
 
             IDocument doc = factory.CreateVersion("PDF");
-            Console.WriteLine(doc.GetDocumentTitle());
-            Console.WriteLine(doc.GetDocumentContent());
+            System.Console.WriteLine(doc.GetDocumentTitle());
+            System.Console.WriteLine(doc.GetDocumentContent());
 
             doc = factory.CreateVersion("DOCX");
-            Console.WriteLine(doc.GetDocumentTitle());
-            Console.WriteLine(doc.GetDocumentContent());
+            System.Console.WriteLine(doc.GetDocumentTitle());
+            System.Console.WriteLine(doc.GetDocumentContent());
 
         }
     }

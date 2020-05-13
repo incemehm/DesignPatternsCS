@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace FactoryMethodDP
+﻿namespace FactoryMethodDP
 {
     public class DocumentFactory
     {
@@ -16,7 +14,7 @@ namespace FactoryMethodDP
             }
             else
             {
-                throw new Exception("Wrong Choice!");
+                throw new System.Exception("Wrong Choice!");
             }
         }
     }

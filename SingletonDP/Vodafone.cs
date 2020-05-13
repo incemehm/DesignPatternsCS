@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SingletonDP
+﻿namespace SingletonDP
 {
     sealed class Vodafone
     {
@@ -12,7 +10,7 @@ namespace SingletonDP
 
         private Vodafone()
         {
-            Console.WriteLine("Vodafone private constructor...");
+            System.Console.WriteLine("Vodafone private constructor...");
         }
 
         public static Vodafone GetInstance()
@@ -47,10 +45,10 @@ namespace SingletonDP
         
         private VodafoneLazy()
         {
-            Console.WriteLine("Vodafone lazy private constructor...");
+            System.Console.WriteLine("Vodafone lazy private constructor...");
         }
 
-        private static readonly Lazy<VodafoneLazy> lazy = new Lazy<VodafoneLazy>(() => new VodafoneLazy());
+        private static readonly System.Lazy<VodafoneLazy> lazy = new System.Lazy<VodafoneLazy>(() => new VodafoneLazy());
     
         public static VodafoneLazy GetInstance()
         {

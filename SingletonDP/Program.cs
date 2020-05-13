@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SingletonDP
+﻿namespace SingletonDP
 {
     class Program
     {
@@ -10,13 +8,13 @@ namespace SingletonDP
             string name = line.GetName();
             int number = line.GetNumber();
 
-            Console.WriteLine("Name: " + name + ", number: " + number);
+            System.Console.WriteLine("Name: " + name + ", number: " + number);
 
             VodafoneLazy lineLazy = VodafoneLazy.GetInstance();
             string name2 = lineLazy.GetName();
             int number2 = lineLazy.GetNumber();
 
-            Console.WriteLine("Name: " + name2 + ", number: " + number2);
+            System.Console.WriteLine("Name: " + name2 + ", number: " + number2);
 
         }
     }

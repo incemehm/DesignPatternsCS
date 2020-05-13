@@ -1,24 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MediatorDP
+﻿namespace MediatorDP
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Kule kule = new Kule();
+            IAirport airport = new Airport();
+            
+            Airline flightLondon = new Lufthansa(airport, "LFT1919");
+            Airline flightIstanbul = new Pegasus(airport, "PGS1881");
+            Airline flightDubai = new Lufthansa(airport, "LFT1923");
+            
+            flightLondon.RequestLanding();
+            System.Console.WriteLine("-----------------------");
 
-            HavayoluSirketi[] sirketler = new HavayoluSirketi[2];
-            sirketler[0] = new THY(kule);
-            sirketler[1] = new Lufthansa(kule);
+            flightIstanbul.RequestLanding();
+            System.Console.WriteLine("-----------------------");
 
-            sirketler[0].InisIzniVer();
-            sirketler[1].InisIzniVer();
-
+            flightDubai.RequestLanding();
+            System.Console.WriteLine("-----------------------");
         }
     }
 }

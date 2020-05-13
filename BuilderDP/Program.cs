@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace BuilderDP
+﻿namespace BuilderDP
 {
     class Program
     {
@@ -14,8 +12,8 @@ namespace BuilderDP
             
             // Build house with a beginner construction master
             owner.BuildHouse(constructionMaster);
-            
-            Console.WriteLine(constructionMaster.House);
+
+            System.Console.WriteLine(constructionMaster.House);
 
             // Hire a mid-level construction master
             constructionMaster = new MidLevelConstMaster();
@@ -23,7 +21,7 @@ namespace BuilderDP
             // Build house with a mid-level construction master
             owner.BuildHouse(constructionMaster);
 
-            Console.WriteLine(constructionMaster.House);
+            System.Console.WriteLine(constructionMaster.House);
 
             // Hire a experienced construction master
             constructionMaster = new ExperiencedConstMaster();
@@ -31,7 +29,7 @@ namespace BuilderDP
             // Build house with a experienced construction master
             owner.BuildHouse(constructionMaster);
 
-            Console.WriteLine(constructionMaster.House);
+            System.Console.WriteLine(constructionMaster.House);
 
         }
     }

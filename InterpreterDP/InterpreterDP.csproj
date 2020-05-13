@@ -41,13 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Beraberlik.cs" />
-    <Compile Include="Galibiyet.cs" />
-    <Compile Include="ISonuc.cs" />
-    <Compile Include="Maglubiyet.cs" />
+    <Compile Include="Draw.cs" />
+    <Compile Include="Win.cs" />
+    <Compile Include="IResult.cs" />
+    <Compile Include="Lost.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Takim.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

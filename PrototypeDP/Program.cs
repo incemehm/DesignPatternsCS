@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PrototypeDP
+﻿namespace PrototypeDP
 {
     class Program
     {
@@ -8,11 +6,11 @@ namespace PrototypeDP
         {
             Dvd dvd = new Dvd("The Hobbit", "There and back again");
 
-            Console.WriteLine(dvd);
+            System.Console.WriteLine(dvd);
 
             Dvd copyDvd = (Dvd)dvd.Clone();
 
-            Console.WriteLine(copyDvd);
+            System.Console.WriteLine(copyDvd);
         }
     }
 }

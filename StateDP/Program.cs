@@ -1,23 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace StateDP
+﻿namespace StateDP
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Hava hava = new Hava();
-            hava.Giyin();
+            Weather weather = new Weather();
+            weather.WearSomething();
 
-            hava.DurumDegistir(new YagmurluHava());
-            hava.Giyin();
+            weather.ChangeWeatherState(new RainyWeather());
+            weather.WearSomething();
 
-            hava.DurumDegistir(new KarliHava());
-            hava.Giyin();
+            weather.ChangeWeatherState(new SnowyWeather());
+            weather.WearSomething();
         }
     }
 }

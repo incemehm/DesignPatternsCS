@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace InterpreterDP
 {
@@ -10,35 +6,30 @@ namespace InterpreterDP
     {
         static void Main(string[] args)
         {
-            Takim takim = new Takim { Form = "GGBMGG", Puan = 0 };
+            string form = "WWDLDWL";
 
-            List<ISonuc> sonuclar = new List<ISonuc>();
+            List<IResult> results = new List<IResult>();
 
-            foreach (char c in takim.Form.ToCharArray())
+            foreach (char c in form.ToCharArray())
             {
                 switch (c)
                 {
-                    case 'G':
-                        sonuclar.Add(new Galibiyet());
+                    case 'W':
+                        results.Add(new Win());
                         break;
-                    case 'B':
-                        sonuclar.Add(new Beraberlik());
+                    case 'D':
+                        results.Add(new Draw());
                         break;
-                    case 'M':
-                        sonuclar.Add(new Maglubiyet());
+                    case 'L':
+                        results.Add(new Lost());
                         break;
                     default:
                         break;
                 }
             }
 
-            foreach (ISonuc sonuc in sonuclar)
-            {
-                sonuc.PuanHesapla(takim);
-            }
-
-            Console.WriteLine("Form Durumu:" + takim.Form + ", Puan: " + takim.Puan);
-        
+            foreach (IResult result in results)            
+                result.CalculatePoint();                              
         }
     }
 }

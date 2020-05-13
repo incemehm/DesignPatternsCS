@@ -41,13 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GunesliHava.cs" />
-    <Compile Include="Hava.cs" />
-    <Compile Include="IHavaDurumu.cs" />
-    <Compile Include="KarliHava.cs" />
+    <Compile Include="SunnyWeather.cs" />
+    <Compile Include="Weather.cs" />
+    <Compile Include="IWeatherState.cs" />
+    <Compile Include="SnowyWeather.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="YagmurluHava.cs" />
+    <Compile Include="RainyWeather.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
