@@ -1,6 +1,6 @@
 ﻿namespace BridgeDP
 {
-    public class OracleDBConnection : IDBConnection
+    public class OracleConnection : IDBConnection
     {
         public void ExecuteQuery(string query)
         {
