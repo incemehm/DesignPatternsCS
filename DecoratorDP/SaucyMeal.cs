@@ -13,7 +13,7 @@
 
             // Do some stuff
 
-            base.Serve();
+            meal.Serve();
         }
     }
 }

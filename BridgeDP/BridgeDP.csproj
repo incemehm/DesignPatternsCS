@@ -41,14 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataEngine.cs" />
+    <Compile Include="DBClient.cs" />
     <Compile Include="IDBConnection.cs" />
-    <Compile Include="LocalDataEngine.cs" />
-    <Compile Include="MySQLDBConnection.cs" />
-    <Compile Include="OracleDBConnection.cs" />
+    <Compile Include="ManagementStudio.cs" />
+    <Compile Include="SQLConnection.cs" />
+    <Compile Include="OracleConnection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServerDataEngine.cs" />
+    <Compile Include="Toad.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

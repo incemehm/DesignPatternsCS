@@ -10,10 +10,10 @@
         public override void Serve()
         {
             System.Console.WriteLine("Salty meal is being served...");
-            
+
             // Do some stuff
 
-            base.Serve();
+            meal.Serve();
         }
     }
 }

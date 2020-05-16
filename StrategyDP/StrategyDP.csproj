@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Yatirim.cs" />
+    <Compile Include="ArrayManager.cs" />
     <Compile Include="QuickSort.cs" />
     <Compile Include="BubbleSort.cs" />
     <Compile Include="ISortingAlgorithm.cs" />

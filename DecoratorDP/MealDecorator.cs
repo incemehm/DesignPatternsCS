@@ -8,11 +8,8 @@
         {
             this.meal = meal;
         }
-        
-        public virtual void Serve()
-        {
-            meal.Serve();
-        }
+
+        public abstract void Serve();
     }
 }
 
