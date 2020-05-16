@@ -1,38 +1,30 @@
-﻿namespace CommandDP
+﻿using System.Collections.Generic;
+
+namespace CommandDP
 {
     public class RemoteControl
     {
-        private ICommand forwardCommand;
-        private ICommand backCommand;
-        private ICommand rightCommand;
-        private ICommand leftCommand;
+        private List<ICommand> commands;
 
-        public RemoteControl(ICommand forwardCommand, ICommand backCommand, ICommand rightCommand, ICommand leftCommand)
+        public RemoteControl()
         {
-            this.forwardCommand = forwardCommand;
-            this.backCommand = backCommand;
-            this.rightCommand = rightCommand;
-            this.leftCommand = leftCommand;
+            commands = new List<ICommand>();
         }
 
-        public void MoveForward(int unit)
+        public void AddCommand(ICommand command)
         {
-            forwardCommand.Move(unit);
+            commands.Add(command);
         }
 
-        public void MoveBack(int unit)
+        public void ExecuteCommands()
         {
-            backCommand.Move(unit);
+            foreach (ICommand command in commands)
+            {
+                command.Move();
+            }
+
+            commands.Clear();
         }
 
-        public void MoveRight(int unit)
-        {
-            rightCommand.Move(unit);
-        }
-
-        public void MoveLeft(int unit)
-        {
-            leftCommand.Move(unit);
-        }
     }
 }

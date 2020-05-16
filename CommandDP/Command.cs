@@ -9,10 +9,10 @@
             this.robot = robot;
         }
 
-        public void Move(int unit)
+        public void Move()
         {
-            robot.PositionX += unit;
-            System.Console.WriteLine("Robot has moved forward " + unit + " unit");
+            robot.PositionX += 1;
+            System.Console.WriteLine("Robot has moved forward");
         }
     }
 
@@ -25,10 +25,10 @@
             this.robot = robot;
         }
 
-        public void Move(int unit)
+        public void Move()
         {
-            robot.PositionX -= unit;
-            System.Console.WriteLine("Robot has moved back " + unit + " unit");             
+            robot.PositionX -= 1;
+            System.Console.WriteLine("Robot has moved back");             
         }
     }
 
@@ -41,10 +41,10 @@
             this.robot = robot;
         }
 
-        public void Move(int unit)
+        public void Move()
         {
-            robot.PositionY += unit;
-            System.Console.WriteLine("Robot has moved right " + unit + " unit");
+            robot.PositionY += 1;
+            System.Console.WriteLine("Robot has moved right");
         }
     }
 
@@ -57,10 +57,10 @@
             this.robot = robot;
         }
 
-        public void Move(int unit)
+        public void Move()
         {
-            robot.PositionY -= unit;
-            System.Console.WriteLine("Robot has moved left " + unit + " unit");
+            robot.PositionY -= 1;
+            System.Console.WriteLine("Robot has moved left");
         }
     }
 }
